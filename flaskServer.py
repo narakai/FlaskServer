@@ -14,6 +14,11 @@ def toJson(data):
 	return json.dumps(data, default=json_util.default)
 
 
+@app.route('/')
+def index():
+	return 'hello world'
+
+
 @app.route('/allbooks', methods=['GET'])
 def findbooks():
 	if request.method == 'GET':
